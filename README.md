@@ -6,7 +6,7 @@ Apicação para gerenciamento de salas
 
 Um empreendimento do SENAC é composto por alguns colaboradores, sendo eles ( professores, coordenadores, diretores, equipe de ti, pessoal da limpeza e entre outros ). 
 
-Os `professores` são responsáveis por repassar o conteúdo didático no qual foi designado a passar. O mesmo para conseguir dar uma aula, é necessário reservar um sala informando as seguintes informação (nº sala, turno(manhã/tarde/noite)) se a sala estiver disponível, caso não, o mesmo deverá tentar outra opção.
+Os `professores` são responsáveis por repassar o conteúdo didático no qual foi designado a passar. O mesmo para conseguir dar uma aula, é necessário reservar um sala informando as seguintes informações (nº sala, turno(manhã/tarde/noite)) se a sala estiver disponível, caso não, o mesmo deverá tentar outra opção.
 
 Os `Coordenadores` são responsáveis por planejar e organizar, em conjunto com a coordenação geral e com os professores supervisores, os trabalhos e estudos a serem realizados pelos residentes docentes e divulgá-los aos residentes docentes de sua área, além de acompanhar e controlar as atividades de cada residente em sua escola de origem.
 
@@ -48,7 +48,8 @@ Etapa que contém os modelos essências para `schema` do banco de dados;
 
 ### MODELO RELACIONAL
 
-### MODELO FISÍCO
+![](imgs/modelo-relacional.png)
+
 
 ## PADRÃO DE PROJETOS
 
@@ -57,3 +58,8 @@ Etapa que contém os modelos essências para `schema` do banco de dados;
 ## PROTOTIPOS
 
 
+ITEM ADICIONADOS - NECESSÁRIO VALIDAÇÃO
+
+REQUISITOS FUNCIONAIS
+REQUISITOS NÃO FUNCIONAIS
+REGRAS DE NEGÓCIOS 
