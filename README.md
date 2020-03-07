@@ -42,14 +42,67 @@ Etapa que contém os  requisitos essências para o sistema
 - `RN-1:` O sistema não deve permitir a reserva da sala, caso a mesma já esteja reservada com o mesmo dia e turno por um professor;
 
 
-## DATABASE
+
+## BANCO DE DADOS
 
 Etapa que contém os modelos essências para `schema` do banco de dados;  
 
-### MODELO RELACIONAL
+### MODELO LÓGICO
 
 ![](imgs/modelo-relacional.png)
 
+### SCRIPT 
+
+```sql
+CREATE TABLE `users` (
+  `userid` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `firtname` varchar(30),
+  `lastname` varchar(30),
+  `age` int,
+  `profile_image` varchar(20),
+  `typeid` int,
+  `reservationid` int,
+   FOREIGN KEY (`typeid`) REFERENCES `types` (`typeid`),
+   FOREIGN KEY (`reservationid`) REFERENCES `reservations` (`reservationid`),
+);
+
+CREATE TABLE `types` (
+  `typeid` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `name` varchar(15)
+);
+
+CREATE TABLE `halls` (
+  `hallid` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `number_hall` int NOT NULL,
+  `floorid` int NOT NULL,
+  `maintenanceid` int,
+   FOREIGN KEY (`maintenanceid`) REFERENCES `maintenances` (`maintenanceid`),
+   FOREIGN KEY (`hallid`) REFERENCES `floors` (`hallid`)
+);
+
+CREATE TABLE `floors` (
+  `floorid` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `number_floor` int NOT NULL,
+  `hallid` int
+);
+
+CREATE TABLE `reservations` (
+  `reservationid` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `date_time` timestamp,
+  `period` ENUM ('morning', 'afternoon', 'night')
+);
+
+CREATE TABLE `maintenances` (
+  `maintenanceid` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `description` varchar(255) NOT NULL,
+  `status` ENUM ('new', 'in_progress', 'waiting', 'concluded'),
+  `created_ed` timestamp,
+  `updated_ed` timestamp
+);
+
+```
+
+*Obs*: SQLLite, PostgressSQL e MYSQL 
 
 ## PADRÃO DE PROJETOS
 
@@ -57,9 +110,4 @@ Etapa que contém os modelos essências para `schema` do banco de dados;
 
 ## PROTOTIPOS
 
-
-ITEM ADICIONADOS - NECESSÁRIO VALIDAÇÃO
-
-REQUISITOS FUNCIONAIS
-REQUISITOS NÃO FUNCIONAIS
-REGRAS DE NEGÓCIOS 
+DEPENDE DA VALIDAÇÃO DOS OUTROS CAMPOS
