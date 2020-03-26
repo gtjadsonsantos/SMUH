@@ -10,7 +10,7 @@ Os `professores` são responsáveis por repassar o conteúdo didático no qual f
 
 Os `Coordenadores` são responsáveis por planejar e organizar, em conjunto com a coordenação geral e com os professores supervisores, os trabalhos e estudos a serem realizados pelos residentes docentes e divulgá-los aos residentes docentes de sua área, além de acompanhar e controlar as atividades de cada residente em sua escola de origem.
 
-Os `Diretóres` são responsáveis por dirigir, planejar, organizar e controlar as atividades de diversas áreas do SENAC, fixando políticas de gestão dos recursos financeiros, administrativos, estruturação, racionalização, e adequação dos serviços diversos. Desenvolve planejamento estratégico, identifica oportunidades, avalia a viabilidade e faz recomendações sobre novos investimentos ou desenvolvimento de novos negócios.
+Os `Diretores` são responsáveis por dirigir, planejar, organizar e controlar as atividades de diversas áreas do SENAC, fixando políticas de gestão dos recursos financeiros, administrativos, estruturação, racionalização, e adequação dos serviços diversos. Desenvolve planejamento estratégico, identifica oportunidades, avalia a viabilidade e faz recomendações sobre novos investimentos ou desenvolvimento de novos negócios.
 
 A `Equipe de TI` é responsável por manter os recursos de ti(computadores, notebook, projetores, cabos, sistemas, aplicativos) em funcionamento e disponíveis para os colaboradores junto aos docentes conseguirem utilizar esses recursos.
 
@@ -43,12 +43,12 @@ Etapa que contém os  requisitos essências para o sistema
 - `RNF-7:` O sistema deve permitir o fracionamento dos períodos de uso das salas
 - `RNF-8:` O sistema deve ter o controle de capacidade ou ocupação das salas conforme o seu tipo
 - `RNF-9:` O sistema deve controlar os tipos de cursos (NEB, NES, FIC, Jovem Aprendiz, etc)
-- `RNF-10:`O sistema deve permitir o controle de ocorrências das salas, para manutenção e/ou limpeza
+- `RNF-10:` O sistema deve permitir o controle de ocorrências das salas, para manutenção e/ou limpeza
+- `RNF-11:` O sistema deve permitir o aluno receber notificações de salas ou possíveis mudanças
 
 ### REGRAS DE NEGÓCIO
 
 - `RN-1:` O sistema não deve permitir a reserva da sala, caso a mesma já esteja reservada com o mesmo dia e turno por um professor
-
 
 ## BANCO DE DADOS
 
