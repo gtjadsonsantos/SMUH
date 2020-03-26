@@ -1,6 +1,6 @@
 # SENAC-PAINEL
 
-Apicação para gerenciamento de salas 
+Aplicação para gerenciamento de salas 
 
 ## HISTÓRIA 
 
@@ -23,24 +23,31 @@ Etapa que contém os  requisitos essências para o sistema
 
 ### REQUISITOS FUNCIONAIS
 
-- `RF-1:` Manter a salas no sistemas - CRUD;
-- `RF-2:` Manter usuários do sistema - CRUD; 
-- `RF-3:` Manter a reserva de salas - CRUD;
-- `RF-4:` Manter informação de manutenção - CRUD;   
+- `RF-1:` Manter a salas no sistemas - CRUD
+- `RF-2:` Manter usuários do sistema - CRUD 
+- `RF-3:` Manter a reserva de salas - CRUD
+- `RF-4:` Manter informação de manutenção - CRUD   
+- `RF-5:` Manter cursos - CRUD
+- `RF-6:` Manter turmas - CRUD
+- `RF-7:` Manter disciplinas - CRUD
+- `RF-8:` Manter professores - CRUD
 
 ### REQUISITOS NÃO FUNCIONAIS
 
-- `RNF-1:` O sistema deve ter uma vesão no browser;
-- `RNF-2:` O sistema deve ter uma versão mobile;
+- `RNF-1:` O sistema deve ter uma vesão no browser
+- `RNF-2:` O sistema deve ter uma versão mobile
 - `RNF-3:` O sistema deve ter seu backend construído em *node*
 - `RNF-4:` O sistema deve ter seu frontend construído em *react*
 - `RNF-5:` O sistema deve ter seu aplicativo mobile construído em *react-native*
-- `RNF-6:` O sistema deve deve emitir uma notificação quando houver um reserva de sala para todos os usuários logados, essa notificação deve conter (nome do professor, sala, turno, data);
+- `RNF-6:` O sistema deve deve emitir uma notificação quando houver um reserva de sala para todos os usuários logados, essa notificação deve conter (nome do professor, sala, turno, data)
+- `RNF-7:` O sistema deve permitir o fracionamento dos períodos de uso das salas
+- `RNF-8:` O sistema deve ter o controle de capacidade ou ocupação das salas conforme o seu tipo
+- `RNF-9:` O sistema deve controlar os tipos de cursos (NEB, NES, FIC, Jovem Aprendiz, etc)
+- `RNF-10:`O sistema deve permitir o controle de ocorrências das salas, para manutenção e/ou limpeza
 
 ### REGRAS DE NEGÓCIO
 
-- `RN-1:` O sistema não deve permitir a reserva da sala, caso a mesma já esteja reservada com o mesmo dia e turno por um professor;
-
+- `RN-1:` O sistema não deve permitir a reserva da sala, caso a mesma já esteja reservada com o mesmo dia e turno por um professor
 
 
 ## BANCO DE DADOS
