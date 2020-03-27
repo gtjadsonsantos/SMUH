@@ -24,33 +24,158 @@ Para que estes públicos tenham um controle mais assertivos dos cursos e das tur
 
 ## REQUISITOS
 
-Considerando esta demanda específica da Faculdade SENAC Florianópolis, relaciona-se abaixo os requisitos essenciais para que seja desenvolvido um sistema para controle de distituição das salas de aulas, com seus professores. Considera-se na lista de requisitos funcionais, que para toda a indicação de "`manter` tal funcionalidade", o sistema estará apto a realizar as operações de: Create, Read, Update e Delete, representados pela sigla CRUD, que significam em português as operações básicas  de criação, consulta, atualização e exclusão de dados nas respectivas tabelas de armazenamento destes dados.
+Considerando esta demanda específica da Faculdade SENAC Florianópolis, relaciona-se abaixo os requisitos essenciais para que seja desenvolvido um sistema para controle de distituição das salas de aulas, com seus professores. Considera-se na lista de requisitos funcionais, que para toda a indicação de `manter` tal funcionalidade", o sistema estará apto a realizar as operações de: Create, Read, Update e Delete, representados pela sigla CRUD, que significam em português as operações básicas  de criação, consulta, atualização e exclusão de dados nas respectivas tabelas de armazenamento destes dados.
 
 ### REQUISITOS FUNCIONAIS
 
-- `RF-1:` Manter cursos
-  a exemplo de: Jovem Aprendiz e Formação Inicial e Continuada / Livres / Técnicos - Design de Interiores | Administração | Farmácia | Marketing | ETC / Graduação - Gestão Comercial | TGTI | Processos Gerenciais | ADS | ETC / Pós-Graduação - Diversos títulos presenciais e a distância ou os MBA´s com algumas opções
-  
-- `RF-2:` Manter turmas
-  a exemplo de: 1ª fase ADS Matutino / 3ª fase PG Noturno / 5ª fase TGTI Noturno / 4 fase GC Noturno / Pós Lato Sensu Gerenciamento de Projetos 2020 / Pós LS Semanal Segurança da Informação 2020 / MBA Inovação 2019 / Jovem Aprendiz em Serviços Administrativos / Aprendizagem Comercial em Vendas / Aprendizagem Comercial em Supermercados / ETC
+- `RF-1:` Manter cursos - CRUD 
 
-- `RF-3:` Manter disciplinas
-  a exemplo de: 1ª ADS - Modelagem de Dados | Engenharia de Requisitos | ETC / 5a TGTI - Governança de TI | Planejamento Estratégico | ETC / MBA Inovação - Empreendedorismo | Gestão de Negócios | Equipes Ágeis | ETC
+*exemplo*: 
+- Jovem Aprendiz e Formação Inicial e Continuada 
+- Livres 
+- Técnicos 
+- - Design de Interiores
+- - Administração
+- - Farmácia
+- - Marketing 
+- - ETC 
+- Graduação
+- - Gestão Comercial 
+- - TGTI
+- - Processos Gerenciais 
+- - ADS
+- - ETC 
+- Pós-Graduação 
+- - Títulos presenciais
+- - Títulos a distância
+- - MBA´s com algumas opções
   
-- `RF-4:` Manter professores   
-  a exemplo de: Modelagem de Dados - André Ulisses, Bruno Rafael, Paulo Henrique | Engenharia de Requisitos - Paulo Lapolli, Flávio, Francisco Teston, Thayse | ETC / Governança de TI - Flávio, Adriano Melo, Thayse, Cecília | Planejamento Estratégico - Ronaldo Pasquini, Thiago Marques, Paulo Henrique | ETC / Empreendedorismo - Thiago Marques, Fábian, Rafael Guimarães | ETC
+- `RF-2:` Manter turmas - CRUD
+
+- 1ª fase
+- - TURMA (Matutino/Vespetino/Noturno) 
+- 2ª fase
+- - TURMA (Matutino/Vespetino/Noturno) 
+- 3ª fase
+- - TURMA (Matutino/Vespetino/Noturno) 
+- 4ª fase
+- - TURMA (Matutino/Vespetino/Noturno) 
+- 5ª fase
+- - TURMA (Matutino/Vespetino/Noturno) 
+
+*exemplo*:
+
+- 1ª fase ADS  
+- 3ª fase PG Noturno 
+- 5ª fase TGTI Noturno 
+- 4 fase GC Noturno 
+- Pós Lato Sensu Gerenciamento de Projetos 2020 
+- Pós LS Semanal Segurança da Informação 2020 
+- MBA Inovação 2019 
+- Jovem Aprendiz em Serviços Administrativos 
+- Aprendizagem Comercial em Vendas 
+- Aprendizagem Comercial em Supermercados 
+- ETC
+
+- `RF-3:` Manter disciplinas - CRUD
+
+- ADS 
+- - Modelagem de Dados 
+- - Engenharia de Requisitos ..ETC
+- TGTI
+- - Governança de TI 
+- - Planejamento Estratégico ..ETC
+- MBA 
+- - Inovação 
+- - Empreendedorismo 
+- - Gestão de Negócios 
+- - Equipes Ágeis ..ETC
   
-- `RF-5:` Manter salas no sistema
-  a exemplo de: {TODO} conforme planilha de ensalamento 
+- `RF-4:` Manter professores - CRUD
+
+*exemplo*:
+
+- Modelagem de Dados
+- - André Ulisses
+- - Bruno Rafael
+- - Paulo Henrique
+- Engenharia de Requisitos 
+- - Paulo Lapolli
+- - Flávio
+- - Francisco Teston
+- - Thayse 
+- Governança de TI
+- - Flávio
+- - Adriano Melo 
+- - Thayse
+- - Cecília 
+- Planejamento Estratégico 
+- - Ronaldo Pasquini
+- - Thiago Marques
+- - Paulo Henrique 
+- Empreendedorismo 
+- - Thiago Marques
+- - Fábian
+- - Rafael Guimarães
   
-- `RF-6:` Manter reservas de salas
-  a exemplo de: {TODO} conforme fluxo inicial de atividades, considerando as necessidades dos usuários e layouts de saída de dados como na planilha de ensalamento e/ou de horários de aulas por curso / semanais
+- `RF-5:` Manter salas - CRUD
+
+- Sala
+- - Número
+- - Tipo (Laboratório, Normal)
+- - Espaço disponível
+
+*Obs*: Conforme planilha de ensalamento 
   
-- `RF-7:` Manter usuários do sistema
-  a exemplo de:  {TODO} conforme identificação dos usuários que incluíram aas anotações existentes na planilha de ensalamento
+- `RF-6:` Manter reservas - CRUD
+
+- Rerserva
+- - Sala 
+- - Horario
+- - Turno
+- - Professor
+- - Curso
+- - Disciplina
+
+- `RF-7:` Manter usuários - CRUD
+
+- Usuario
+- - nome
+- - username
+- - password
+- - tipo (admin, professor, manutenção, limpeza, aluno)
+- - Log de ações na aplicação
   
-- `RF-8:` Manter registros de limpeza ou manutenção
-  a exemplo de: {TODO} conforme planilha de ensalamento
+- `RF-8:` Manter Limpeza - CRUD
+
+- Limpeza  
+- - Status
+- - Nº Sala
+- - Data
+- - Horário
+- - Usuário que limpou a sala
+
+- `RF-9:` Manter manutenção - CRUD
+
+- Manutenção  
+- - Status
+- - Sala
+- - Data
+- - Horario
+- - Objeto a ser arrumado
+- - Usuário que arrumou o objeto 
+
+- `RNF- 10:` Emitir notificação - CRUD
+
+- Notificação 
+- - Usuario
+- - Evento
+- - Descrição  
+- - Sala
+- - ?Turno
+- - Data
+- - ?Objeto
+
 
 ### REQUISITOS NÃO FUNCIONAIS
 
@@ -59,15 +184,13 @@ Considerando esta demanda específica da Faculdade SENAC Florianópolis, relacio
 - `RNF-3:` O sistema deve ter seu *backend* construído em *node*
 - `RNF-4:` O sistema deve ter seu *frontend* construído em *react*
 - `RNF-5:` O sistema deve ter seu aplicativo *mobile* construído em *react-native*
-- `RNF- 6:` O sistema deve emitir notificação de reserva de sala para todos os usuários logados, essa notificação deve conter (nome do professor, sala, turno, data) - *`Este RNF está me parecendo um RF`*
-- `RNF-7:` O sistema deve permitir a divisão dos períodos de uso das salas
-- `RNF-8:` O sistema deve controlar a capacidade ou ocupação das salas conforme o seu tipo
-- `RNF-9:` O sistema deve controlar os tipos de cursos (NEB, NES, FIC, Jovem Aprendiz, etc)
-- `RNF-10:` O sistema deve permitir a manutenção de registros ou status das ocorrências das salas (à equipe de manutenção e/ou limpeza)
-- `RNF-11:` O sistema deve permitir o aluno receber notificações de salas ou possíveis mudanças das turmas que estiver cadastrado - *`Este RNF está me parecendo um RF` e parece um desdobramento do RNF-6* 
+- `RNF-6:` O sistema deve permitir a divisão dos períodos de uso das salas
+- `RNF-7:` O sistema deve controlar a capacidade ou ocupação das salas conforme o seu tipo
+- `RNF-8:` O sistema deve controlar os tipos de cursos (NEB, NES, FIC, Jovem Aprendiz, etc)
+- `RNF-9:` O sistema deve permitir a manutenção de registros ou status das ocorrências das salas (à equipe de manutenção e/ou limpeza)
+
 
 ### REGRAS DE NEGÓCIO
-{TODO} Revisão no próximo encontro!!!
 
 - `RN-1:` O sistema não deve permitir a reserva da sala, caso a mesma já esteja reservada com o mesmo dia e turno por um professor
 
