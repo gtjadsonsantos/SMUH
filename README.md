@@ -2,51 +2,72 @@
 
 Aplicação para gerenciamento de salas 
 
-## HISTÓRIA 
+## CONTEXTUALIZAÇÃO 
 
-Um empreendimento do SENAC é composto por alguns colaboradores, sendo eles ( professores, coordenadores, diretores, equipe de ti, pessoal da limpeza e entre outros ). 
+Uma `instituição de ensino` é composta por diferentes atores ou envolvidos e a Faculdade SENAC Florianópolis não difere de outras Universidades, pois conta com alguns colaboradores internos e clientes, a exemplo de alunos, professores, coordenadores, equipes administrativas, diretoria, equipe de TI, responsáveis pela manutenção e limpeza, entre outros.
 
-Os `professores` são responsáveis por repassar o conteúdo didático no qual foi designado a passar. O mesmo para conseguir dar uma aula, é necessário reservar um sala informando as seguintes informações (nº sala, turno(manhã/tarde/noite)) se a sala estiver disponível, caso não, o mesmo deverá tentar outra opção.
+Os `alunos`são os verdadeiros responsáveis pelas demandas da instituição de ensino e grande parte da comunidade acadêmica está separada por este importante público, que na Faculdade SENAC Florianópolis e considerada como cliente externo.
+ 
+Os `professores` são responsáveis por abordar os conteúdos didáticos considerando a estrutura pedagógica e devem se adaptar de acordo com a estutura física disponível a cada período de aula. Estes atores, para lecionarem aos alunos das turmas, precisam dominar os assuntos propostos pelas disciplinas das diferentes unidades curriculares. Além da teoria, os professores também demandam por recursos físicos, a exemplo de espaço adequado, materiais para aprendizagem e os ambientes de interação para ampliar o aprendizado de cada discente ou turma. Neste contexto, a equipe administrativa ou a equipe de TI precisa disponibilizar as salas de aulas, os materiais didáticos, os kits de dinâmicas, os diários de classe e muitos outros recursos para uso do docente. 
 
-Os `Coordenadores` são responsáveis por planejar e organizar, em conjunto com a coordenação geral e com os professores supervisores, os trabalhos e estudos a serem realizados pelos residentes docentes e divulgá-los aos residentes docentes de sua área, além de acompanhar e controlar as atividades de cada residente em sua escola de origem.
+Os `coordenadores de cursos` são responsáveis por planejar a estrutura do curso em conjunto com a `coordenação de núcleo`, organizar os recursos físicos necessários, operacionalizar a execução das disciplinas, distribuir o cronograma de aulas semestrais, mensal ou semanal, considerando a disponibilidade e os conhecimentos dos professores que compõem o quadro docente e as disciplinas que lecionam, para que o bom andamento dos cursos aconteçam em harmonia entre a comunidade acadêmica e também necessitando de alguns controles de atividades diárias, situações não convencionais e possíveis necessidades de correções ou ajustes com os professores ou equipes internas da instituição.
 
-Os `Diretores` são responsáveis por dirigir, planejar, organizar e controlar as atividades de diversas áreas do SENAC, fixando políticas de gestão dos recursos financeiros, administrativos, estruturação, racionalização, e adequação dos serviços diversos. Desenvolve planejamento estratégico, identifica oportunidades, avalia a viabilidade e faz recomendações sobre novos investimentos ou desenvolvimento de novos negócios.
+A `equipe administrativa` é responsável pela alocação de materiais, insumos para as aulas, ajustes de cronograma e adequação do calendário das aulas com os locais disponíveis na unidade, ou seja, as salas, os laboratórios e até mesmo o auditório. Nestes ambientes de ensino, as informações podem ser identificadas pelos seus números, seus tipos de carteiras ou mesas, quantidades de carteiras, mesas, micros, existência ou não de projetores, armários ou racks específicos, além de identificar o tipo de curso que poderá acontecer nestes ambientes, como curso técnico, formação inicial continuada, graduação, pós-graduação, atividade in-company, entre outros. Nestes ambiente o controle de horários e turnos de utilização, a rápida identificação de salas X cursos ou da disponibilidade de salas, tanto de manhã/tarde/noite, se torna uma das tarefas mais necessárias deste tipo de controle.
 
-A `Equipe de TI` é responsável por manter os recursos de ti(computadores, notebook, projetores, cabos, sistemas, aplicativos) em funcionamento e disponíveis para os colaboradores junto aos docentes conseguirem utilizar esses recursos.
+A `equipe de TI` é responsável por preparar os ambientes educacionais para uso dos professores, alunos ou coordenadores, a exemplo de laboratórios adequados, computadores em funcionamento, notebook´s de backup´s, projetores ajustados, softwares instalados e configurados, ou ainda, com as conexões entre a infraestrutura física dos equipamentos das diferentes redes em perfeito funcionamento.
 
-O pessoal da `Limpeza` são responsáveis por manter os locais em geral do SENAC limpos e organizados.
+A `equipe de manutenção e limpeza` é responsável por manter os ambientes utilizados em perfeitas condições de higiene e organização, adaptações de sala ou das necessidades de melhorias, correções de instalações ou substituições de equipamentos danificados, em todos os locais utilizados pelo público que utiliza as instalações da instituição de ensino.
 
+À `direção da instituição` cabe as atividades estratégicas para identificar oportunidades, avaliar a viabilidade, recomendar novos investimentos, desenvolver novos negócios, além de dirigir, planejar, organizar e controlar as atividades das diversas áreas da Faculdade SENAC Florianópolis, fixando políticas de gestão dos recursos financeiros, administrativos, sua estruturação, racionalização e adequação dos serviços para melhor atender ao aluno que o principal cliente. 
+
+Para que estes públicos tenham um controle mais assertivos dos cursos e das turmas que estão em andamento e para que haja controle dos recursos utilizados e diponíveis em um determinado período de tempo, seja ele diário, semanal ou mensal e ainda semestral ou anual, se faz necessário um controle de salas utilizadas, alocação dos cursos em execução, professores alocados nas disciplinas ou salas, disponibilidade de ambientes para uso ou para a oferta de novos cursos, bem como a quantidade estimada para ocupação de salas, entre outras informações.
 
 ## REQUISITOS
 
-Etapa que contém os  requisitos essências para o sistema 
+Considerando esta demanda específica da Faculdade SENAC Florianópolis, relaciona-se abaixo os requisitos essenciais para que seja desenvolvido um sistema para controle de distituição das salas de aulas, com seus professores. Considera-se na lista de requisitos funcionais, que para toda a indicação de "`manter` tal funcionalidade", o sistema estará apto a realizar as operações de: Create, Read, Update e Delete, representados pela sigla CRUD, que significam em português as operações básicas  de criação, consulta, atualização e exclusão de dados nas respectivas tabelas de armazenamento destes dados.
 
 ### REQUISITOS FUNCIONAIS
 
-- `RF-1:` Manter a salas no sistemas - CRUD
-- `RF-2:` Manter usuários do sistema - CRUD 
-- `RF-3:` Manter a reserva de salas - CRUD
-- `RF-4:` Manter informação de manutenção - CRUD   
-- `RF-5:` Manter cursos - CRUD
-- `RF-6:` Manter turmas - CRUD
-- `RF-7:` Manter disciplinas - CRUD
-- `RF-8:` Manter professores - CRUD
+- `RF-1:` Manter cursos
+  a exemplo de: Jovem Aprendiz e Formação Inicial e Continuada / Livres / Técnicos - Design de Interiores | Administração | Farmácia | Marketing | ETC / Graduação - Gestão Comercial | TGTI | Processos Gerenciais | ADS | ETC / Pós-Graduação - Diversos títulos presenciais e a distância ou os MBA´s com algumas opções
+  
+- `RF-2:` Manter turmas
+  a exemplo de: 1ª fase ADS Matutino / 3ª fase PG Noturno / 5ª fase TGTI Noturno / 4 fase GC Noturno / Pós Lato Sensu Gerenciamento de Projetos 2020 / Pós LS Semanal Segurança da Informação 2020 / MBA Inovação 2019 / Jovem Aprendiz em Serviços Administrativos / Aprendizagem Comercial em Vendas / Aprendizagem Comercial em Supermercados / ETC
+
+- `RF-3:` Manter disciplinas
+  a exemplo de: 1ª ADS - Modelagem de Dados | Engenharia de Requisitos | ETC / 5a TGTI - Governança de TI | Planejamento Estratégico | ETC / MBA Inovação - Empreendedorismo | Gestão de Negócios | Equipes Ágeis | ETC
+  
+- `RF-4:` Manter professores   
+  a exemplo de: Modelagem de Dados - André Ulisses, Bruno Rafael, Paulo Henrique | Engenharia de Requisitos - Paulo Lapolli, Flávio, Francisco Teston, Thayse | ETC / Governança de TI - Flávio, Adriano Melo, Thayse, Cecília | Planejamento Estratégico - Ronaldo Pasquini, Thiago Marques, Paulo Henrique | ETC / Empreendedorismo - Thiago Marques, Fábian, Rafael Guimarães | ETC
+  
+- `RF-5:` Manter salas no sistema
+  a exemplo de: {TODO} conforme planilha de ensalamento 
+  
+- `RF-6:` Manter reservas de salas
+  a exemplo de: {TODO} conforme fluxo inicial de atividades, considerando as necessidades dos usuários e layouts de saída de dados como na planilha de ensalamento e/ou de horários de aulas por curso / semanais
+  
+- `RF-7:` Manter usuários do sistema
+  a exemplo de:  {TODO} conforme identificação dos usuários que incluíram aas anotações existentes na planilha de ensalamento
+  
+- `RF-8:` Manter registros de limpeza ou manutenção
+  a exemplo de: {TODO} conforme planilha de ensalamento
 
 ### REQUISITOS NÃO FUNCIONAIS
 
-- `RNF-1:` O sistema deve ter uma vesão no browser
-- `RNF-2:` O sistema deve ter uma versão mobile
-- `RNF-3:` O sistema deve ter seu backend construído em *node*
-- `RNF-4:` O sistema deve ter seu frontend construído em *react*
-- `RNF-5:` O sistema deve ter seu aplicativo mobile construído em *react-native*
-- `RNF-6:` O sistema deve deve emitir uma notificação quando houver um reserva de sala para todos os usuários logados, essa notificação deve conter (nome do professor, sala, turno, data)
-- `RNF-7:` O sistema deve permitir o fracionamento dos períodos de uso das salas
-- `RNF-8:` O sistema deve ter o controle de capacidade ou ocupação das salas conforme o seu tipo
+- `RNF-1:` O sistema deve ter uma versão para uso em navegador / web browser
+- `RNF-2:` O sistema deve ter uma versão em *mobile* híbrido (Android / iOS)
+- `RNF-3:` O sistema deve ter seu *backend* construído em *node*
+- `RNF-4:` O sistema deve ter seu *frontend* construído em *react*
+- `RNF-5:` O sistema deve ter seu aplicativo *mobile* construído em *react-native*
+- `RNF- 6:` O sistema deve emitir notificação de reserva de sala para todos os usuários logados, essa notificação deve conter (nome do professor, sala, turno, data) - *`Este RNF está me parecendo um RF`*
+- `RNF-7:` O sistema deve permitir a divisão dos períodos de uso das salas
+- `RNF-8:` O sistema deve controlar a capacidade ou ocupação das salas conforme o seu tipo
 - `RNF-9:` O sistema deve controlar os tipos de cursos (NEB, NES, FIC, Jovem Aprendiz, etc)
-- `RNF-10:` O sistema deve permitir o controle de ocorrências das salas, para manutenção e/ou limpeza
-- `RNF-11:` O sistema deve permitir o aluno receber notificações de salas ou possíveis mudanças
+- `RNF-10:` O sistema deve permitir a manutenção de registros ou status das ocorrências das salas (à equipe de manutenção e/ou limpeza)
+- `RNF-11:` O sistema deve permitir o aluno receber notificações de salas ou possíveis mudanças das turmas que estiver cadastrado - *`Este RNF está me parecendo um RF` e parece um desdobramento do RNF-6* 
 
 ### REGRAS DE NEGÓCIO
+{TODO} Revisão no próximo encontro!!!
 
 - `RN-1:` O sistema não deve permitir a reserva da sala, caso a mesma já esteja reservada com o mesmo dia e turno por um professor
 
