@@ -132,7 +132,8 @@ Considerando esta demanda específica da Faculdade SENAC Florianópolis, relacio
 
 - Sala
 - - Número
-- - Tipo (Laboratório, Comum)
+- - Tipo (Laboratório de Informática,Laboratório de Costura,Sala de Aula,Pedagogia)
+- - Detalhes 
 - - Espaço disponível
 
 *Obs*: Conforme planilha de ensalamento 
@@ -217,36 +218,37 @@ Para visualizar o ERD instale a extesão em seu vscode [dineug](https://marketpl
 ### SCRIPT 
 
 ```sql
+
 CREATE TABLE Calls
 (
+  CallId      INT                                   NOT NULL,
   Status      ENUM("New","In Progress","Concluded") NOT NULL,
   Datetime    Date                                  NOT NULL,
   Description TEXT                                  NOT NULL,
   Subject     VARCHAR(100)                          NOT NULL,
   UserId      INT                                   NOT NULL,
   TypeCallId  INT                                   NULL    ,
-  RoomId      int                                   NOT NULL
+  RoomId      int                                   NOT NULL,
+  PRIMARY KEY (CallId)
 );
 
 CREATE TABLE Courses
 (
-  CourseName VARCHAR(100) NOT NULL,
   CourseId   INT          NOT NULL,
-  Courses    INT          NOT NULL,
+  CourseName VARCHAR(100) NOT NULL,
   PRIMARY KEY (CourseId)
 );
 
 CREATE TABLE Courses_Disciplines
 (
   DisciplineId INT NOT NULL,
-  Courses      INT NOT NULL,
-  PRIMARY KEY (Courses)
+  CourseId     INT NOT NULL
 );
 
 CREATE TABLE Disciplines
 (
-  DisciplineName VARCHAR(100) NOT NULL,
   DisciplineId   INT          NOT NULL,
+  DisciplineName VARCHAR(100) NOT NULL,
   PRIMARY KEY (DisciplineId)
 );
 
@@ -258,27 +260,31 @@ CREATE TABLE Disciplines_Teachers
 
 CREATE TABLE Notifications
 (
-  NotificationId INT PRIMARY KEY NOT NULL,
-  EventName      VARCHAR(100)    NOT NULL,
-  Description    VARCHAR(300)    NOT NULL
+  NotificationId INT                       NOT NULL,
+  EventName      ENUM("Call","Resevation") NOT NULL,
+  Message        VARCHAR(300)              NOT NULL,
+  PRIMARY KEY (NotificationId)
 );
 
 CREATE TABLE Reservations
 (
+  ResevationId   INT                                  NOT NULL,
   ResevationDate DATETIME                             NOT NULL,
   Period         ENUM("Morning","Vespertine","Nigth") NOT NULL,
   TeacherId      INT                                  NOT NULL,
   RoomId         int                                  NOT NULL,
   TeamId         INT                                  NOT NULL,
-  ResevationId   INT                                  NOT NULL
+  StatusTypeId   INT                                  NOT NULL,
+  PRIMARY KEY (ResevationId)
 );
 
 CREATE TABLE Rooms
 (
-  RoomId       int NOT NULL,
-  NumberTables INT NOT NULL,
-  Number       INT NOT NULL,
-  TypeRoomId   INT NOT NULL,
+  RoomId       int  NOT NULL,
+  NumberTables INT  NOT NULL,
+  Number       INT  NOT NULL,
+  TypeRoomId   INT  NOT NULL,
+  Details      TEXT NULL    ,
   PRIMARY KEY (RoomId)
 );
 
@@ -291,10 +297,10 @@ CREATE TABLE Teachers
 
 CREATE TABLE Teams
 (
+  TeamId INT                                  NOT NULL,
   Period ENUM("Morning","Vespertine","Nigth") NOT NULL,
   Year   INT                                  NOT NULL,
   Name   VARCHAR(100)                         NOT NULL,
-  TeamId INT                                  NOT NULL,
   PRIMARY KEY (TeamId)
 );
 
@@ -312,10 +318,17 @@ CREATE TABLE TypesRooms
   PRIMARY KEY (TypeRoomId)
 );
 
+CREATE TABLE TypesStatus
+(
+  StatusTypeId INT         NOT NULL,
+  TypeName     VARCHAR(50) NOT NULL,
+  PRIMARY KEY (StatusTypeId)
+);
+
 CREATE TABLE TypeUsers
 (
-  TypeName  VARCHAR(20) NOT NULL,
   TypeUseId INT         NOT NULL,
+  TypeName  VARCHAR(20) NOT NULL,
   PRIMARY KEY (TypeUseId)
 );
 
@@ -327,6 +340,12 @@ CREATE TABLE Users
   Password  VARCHAR(50)  NOT NULL,
   TypeUseId INT          NOT NULL,
   PRIMARY KEY (UserId)
+);
+
+CREATE TABLE Users_Notification
+(
+  UserId         INT NOT NULL,
+  NotificationId INT NOT NULL
 );
 
 ALTER TABLE Calls
@@ -379,15 +398,30 @@ ALTER TABLE Courses_Disciplines
     FOREIGN KEY (DisciplineId)
     REFERENCES Disciplines (DisciplineId);
 
-ALTER TABLE Courses
-  ADD CONSTRAINT FK_Courses_Disciplines_TO_Courses
-    FOREIGN KEY (Courses)
-    REFERENCES Courses_Disciplines (Courses);
-
 ALTER TABLE Rooms
   ADD CONSTRAINT FK_TypesRooms_TO_Rooms
     FOREIGN KEY (TypeRoomId)
     REFERENCES TypesRooms (TypeRoomId);
+
+ALTER TABLE Reservations
+  ADD CONSTRAINT FK_TypesStatus_TO_Reservations
+    FOREIGN KEY (StatusTypeId)
+    REFERENCES TypesStatus (StatusTypeId);
+
+ALTER TABLE Users_Notification
+  ADD CONSTRAINT FK_Users_TO_Users_Notification
+    FOREIGN KEY (UserId)
+    REFERENCES Users (UserId);
+
+ALTER TABLE Users_Notification
+  ADD CONSTRAINT FK_Notifications_TO_Users_Notification
+    FOREIGN KEY (NotificationId)
+    REFERENCES Notifications (NotificationId);
+
+ALTER TABLE Courses_Disciplines
+  ADD CONSTRAINT FK_Courses_TO_Courses_Disciplines
+    FOREIGN KEY (CourseId)
+    REFERENCES Courses (CourseId);
 ```
 
 *Obs*: SQLLite, PostgressSQL e MYSQL 
@@ -399,3 +433,18 @@ ALTER TABLE Rooms
 ## PROTOTIPOS
 
 DEPENDE DA VALIDAÇÃO DOS OUTROS CAMPOS
+
+
+
+
+## CONTRIBUIDORES 
+
+<table>
+  <tr>
+    <td><img src="https://avatars3.githubusercontent.com/u/42282908?s=60&v=4" width="50"></td>
+    <td><img src="https://avatars2.githubusercontent.com/u/54027728?s=60&v=4" width="50"></td>
+    <td><img src="https://avatars1.githubusercontent.com/u/61851655?s=32&v=4" width="50"></td>
+  </tr>
+</table>
+
+https://avatars1.githubusercontent.com/u/61851655?s=32&v=4
