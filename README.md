@@ -49,7 +49,9 @@ Considerando esta demanda específica da Faculdade SENAC Florianópolis, relacio
 - - Títulos presenciais
 - - Títulos a distância
 - - MBA´s com algumas opções
-  
+
+Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc 
+
 - `RF-2:` Manter turmas - CRUD
 
 - 1ª fase
