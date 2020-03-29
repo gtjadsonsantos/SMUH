@@ -2,11 +2,8 @@
 ![](https://img.shields.io/badge/Opensource-smuh-orange) 
 ![](https://img.shields.io/badge/Status-InDevelopment-gree)
 
-# SMUH
-
-
-<p align="center">
-  <img src="imgs/logo.svg">
+<p align="left">
+  <img width="120" src="imgs/logo.svg">
 </p>
 
 <p align="center">
@@ -193,7 +190,7 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Objeto a ser arrumado
 - - Usuário que arrumou o objeto 
 
-- `RNF- 10:` Emitir notificação - CRUD
+- `RF- 10:` Emitir notificação - CRUD
 
 - Notificação 
 - - Usuario
@@ -204,18 +201,25 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Data
 - - ?Objeto
 
+- `RF- 11:` Manter Themas - CRUD
+
+- Themas
+- - Textos
+- - Botões
+- - Imagens
+- - Marcações 
+- - Plano de fundo
 
 ### REQUISITOS NÃO FUNCIONAIS
 
 - `RNF-1:` O sistema deve ter uma versão para uso em navegador / web browser
-- `RNF-2:` O sistema deve ter uma versão em *mobile* híbrido (Android / iOS)
+- `RNF-2:` O sistema deve ter uma versão em *mobile* híbrido (Android / iOS) construídos em *react-native*
 - `RNF-3:` O sistema deve ter seu *backend* construído em *node*
 - `RNF-4:` O sistema deve ter seu *frontend* construído em *react*
-- `RNF-5:` O sistema deve ter seu aplicativo *mobile* construído em *react-native*
-- `RNF-6:` O sistema deve permitir a divisão dos períodos de uso das salas
-- `RNF-7:` O sistema deve controlar a capacidade ou ocupação das salas conforme o seu tipo
-- `RNF-8:` O sistema deve controlar os tipos de cursos (NEB, NES, FIC, Jovem Aprendiz, etc)
-- `RNF-9:` O sistema deve permitir a manutenção de registros ou status das ocorrências das salas (à equipe de manutenção e/ou limpeza)
+- `RNF-5:` O sistema deve permitir a divisão dos períodos de uso das salas
+- `RNF-6:` O sistema deve controlar a capacidade ou ocupação das salas conforme o seu tipo
+- `RNF-7:` O sistema deve controlar os tipos de cursos (NEB, NES, FIC, Jovem Aprendiz, etc)
+- `RNF-8:` O sistema deve permitir a manutenção de registros ou status das ocorrências das salas (à equipe de manutenção e/ou limpeza)
 
 
 ### REGRAS DE NEGÓCIO
