@@ -1,8 +1,19 @@
-# SENAC-PAINEL
+
+![](https://img.shields.io/badge/Opensource-smuh-orange) 
+![](https://img.shields.io/badge/Status-InDevelopment-gree)
+
+# SMUH
+
+
+<p align="center">
+  <img src="imgs/logo.svg">
+</p>
 
 Aplicação para gerenciamento de salas 
 
 ## CONTEXTUALIZAÇÃO 
+
+O cenário utilizado foi baseado na estrutura do SENAC
 
 Uma `instituição de ensino` é composta por diferentes atores ou envolvidos e a Faculdade SENAC Florianópolis não difere de outras Universidades, pois conta com alguns colaboradores internos e clientes, a exemplo de alunos, professores, coordenadores, equipes administrativas, diretoria, equipe de TI, responsáveis pela manutenção e limpeza, entre outros.
 
@@ -448,5 +459,3 @@ DEPENDE DA VALIDAÇÃO DOS OUTROS CAMPOS
     <td><img src="https://avatars1.githubusercontent.com/u/61851655?s=32&v=4" width="50"></td>
   </tr>
 </table>
-
-https://avatars1.githubusercontent.com/u/61851655?s=32&v=4
