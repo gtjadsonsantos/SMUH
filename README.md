@@ -9,6 +9,10 @@
   <img src="imgs/logo.svg">
 </p>
 
+<p align="center">
+  <img src="imgs/muil-plataforma.svg">
+</p>
+
 Aplicação para gerenciamento de salas 
 
 ## CONTEXTUALIZAÇÃO 
