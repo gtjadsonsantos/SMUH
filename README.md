@@ -453,7 +453,11 @@ ALTER TABLE Courses_Disciplines
 
 ## PROTOTIPOS
 
-DEPENDE DA VALIDAÇÃO DOS OUTROS CAMPOS
+
+<p align="center">
+  <img width="550" src="imgs/screen-prototypes.svg">
+</p>
+
 
 
 
