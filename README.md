@@ -10,6 +10,8 @@
   <img src="imgs/muil-plataforma.svg">
 </p>
 
+Eu sugiro que o *Thema* principal seja ajustado com a padrozinação de cores que o Senac já costuma utilizar (conforme portal.sc.senac.br), sendo que outro temas possam ser escolhidos pelos usuários...
+
 Aplicação para gerenciamento de salas 
 
 ## CONTEXTUALIZAÇÃO 
@@ -18,25 +20,25 @@ O cenário utilizado foi baseado na estrutura do SENAC
 
 Uma `instituição de ensino` é composta por diferentes atores ou envolvidos e a Faculdade SENAC Florianópolis não difere de outras Universidades, pois conta com alguns colaboradores internos e clientes, a exemplo de alunos, professores, coordenadores, equipes administrativas, diretoria, equipe de TI, responsáveis pela manutenção e limpeza, entre outros.
 
-Os `alunos`são os verdadeiros responsáveis pelas demandas da instituição de ensino e grande parte da comunidade acadêmica está separada por este importante público, que na Faculdade SENAC Florianópolis e considerada como cliente externo.
+Os `alunos`são os verdadeiros responsáveis pelas demandas da instituição de ensino e grande parte da comunidade acadêmica está separada por este importante público, que na Faculdade SENAC Florianópolis é considerada como cliente externo.
  
 Os `professores` são responsáveis por abordar os conteúdos didáticos considerando a estrutura pedagógica e devem se adaptar de acordo com a estutura física disponível a cada período de aula. Estes atores, para lecionarem aos alunos das turmas, precisam dominar os assuntos propostos pelas disciplinas das diferentes unidades curriculares. Além da teoria, os professores também demandam por recursos físicos, a exemplo de espaço adequado, materiais para aprendizagem e os ambientes de interação para ampliar o aprendizado de cada discente ou turma. Neste contexto, a equipe administrativa ou a equipe de TI precisa disponibilizar as salas de aulas, os materiais didáticos, os kits de dinâmicas, os diários de classe e muitos outros recursos para uso do docente. 
 
 Os `coordenadores de cursos` são responsáveis por planejar a estrutura do curso em conjunto com a `coordenação de núcleo`, organizar os recursos físicos necessários, operacionalizar a execução das disciplinas, distribuir o cronograma de aulas semestrais, mensal ou semanal, considerando a disponibilidade e os conhecimentos dos professores que compõem o quadro docente e as disciplinas que lecionam, para que o bom andamento dos cursos aconteçam em harmonia entre a comunidade acadêmica e também necessitando de alguns controles de atividades diárias, situações não convencionais e possíveis necessidades de correções ou ajustes com os professores ou equipes internas da instituição.
 
-A `equipe administrativa` é responsável pela alocação de materiais, insumos para as aulas, ajustes de cronograma e adequação do calendário das aulas com os locais disponíveis na unidade, ou seja, as salas, os laboratórios e até mesmo o auditório. Nestes ambientes de ensino, as informações podem ser identificadas pelos seus números, seus tipos de carteiras ou mesas, quantidades de carteiras, mesas, micros, existência ou não de projetores, armários ou racks específicos, além de identificar o tipo de curso que poderá acontecer nestes ambientes, como curso técnico, formação inicial continuada, graduação, pós-graduação, atividade in-company, entre outros. Nestes ambiente o controle de horários e turnos de utilização, a rápida identificação de salas X cursos ou da disponibilidade de salas, tanto de manhã/tarde/noite, se torna uma das tarefas mais necessárias deste tipo de controle.
+A `equipe administrativa` é responsável pela alocação de materiais, insumos para as aulas, ajustes de cronograma e adequação do calendário das aulas com os locais disponíveis na unidade, ou seja, as salas, os laboratórios e até mesmo o auditório. Nestes ambientes de ensino, as informações podem ser identificadas pelos seus números, seus tipos de carteiras ou mesas, quantidades de carteiras, mesas, micros, existência ou não de projetores, armários ou racks específicos, além de identificar o tipo de curso que poderá acontecer nestes ambientes, como curso técnico, formação inicial continuada, graduação, pós-graduação, atividade in-company, entre outros. Considerando este contexto, o controle de horários e turnos de utilização, a identificação rápida de salas disponíveis X cursos em andamento, quanto a disponibilidade geral de salas, tanto de manhã/tarde/noite, se torna uma das tarefas mais necessárias deste tipo de controle.
 
 A `equipe de TI` é responsável por preparar os ambientes educacionais para uso dos professores, alunos ou coordenadores, a exemplo de laboratórios adequados, computadores em funcionamento, notebook´s de backup´s, projetores ajustados, softwares instalados e configurados, ou ainda, com as conexões entre a infraestrutura física dos equipamentos das diferentes redes em perfeito funcionamento.
 
 A `equipe de manutenção e limpeza` é responsável por manter os ambientes utilizados em perfeitas condições de higiene e organização, adaptações de sala ou das necessidades de melhorias, correções de instalações ou substituições de equipamentos danificados, em todos os locais utilizados pelo público que utiliza as instalações da instituição de ensino.
 
-À `direção da instituição` cabe as atividades estratégicas para identificar oportunidades, avaliar a viabilidade, recomendar novos investimentos, desenvolver novos negócios, além de dirigir, planejar, organizar e controlar as atividades das diversas áreas da Faculdade SENAC Florianópolis, fixando políticas de gestão dos recursos financeiros, administrativos, sua estruturação, racionalização e adequação dos serviços para melhor atender ao aluno que o principal cliente. 
+À `direção da instituição` cabe as atividades estratégicas para identificar oportunidades, avaliar a viabilidade, recomendar novos investimentos, desenvolver novos negócios, além de dirigir, planejar, organizar e controlar as atividades das diversas áreas da Faculdade SENAC Florianópolis, fixando políticas de gestão dos recursos financeiros, administrativos, sua estruturação, racionalização e adequação dos serviços para melhor atender ao aluno que é o principal cliente. 
 
-Para que estes públicos tenham um controle mais assertivos dos cursos e das turmas que estão em andamento e para que haja controle dos recursos utilizados e diponíveis em um determinado período de tempo, seja ele diário, semanal ou mensal e ainda semestral ou anual, se faz necessário um controle de salas utilizadas, alocação dos cursos em execução, professores alocados nas disciplinas ou salas, disponibilidade de ambientes para uso ou para a oferta de novos cursos, bem como a quantidade estimada para ocupação de salas, entre outras informações.
+Para que estes públicos tenham um controle mais assertivos dos cursos e das turmas que estão em andamento e para que haja controle dos recursos utilizados e diponíveis em um determinado período de tempo, seja ele diário, semanal ou mensal e ainda semestral ou anual, se faz necessário um controle de salas utilizadas, alocação dos cursos em execução, professores alocados nas disciplinas ou salas, disponibilidade de ambientes para uso ou para oferta de novos cursos, bem como a quantidade estimada para ocupação de salas, entre outras informações.
 
 ## REQUISITOS
 
-Considerando esta demanda específica da Faculdade SENAC Florianópolis, relaciona-se abaixo os requisitos essenciais para que seja desenvolvido um sistema para controle de distituição das salas de aulas, com seus professores. Considera-se na lista de requisitos funcionais, que para toda a indicação de `manter` tal funcionalidade", o sistema estará apto a realizar as operações de: Create, Read, Update e Delete, representados pela sigla CRUD, que significam em português as operações básicas  de criação, consulta, atualização e exclusão de dados nas respectivas tabelas de armazenamento destes dados.
+Considerando esta demanda específica da Faculdade SENAC Florianópolis, relaciona-se abaixo os requisitos essenciais para que seja desenvolvido um sistema para controle de distribuição das salas de aulas, com seus professores. Considera-se na lista de requisitos funcionais, que para toda a indicação de `manter` tal funcionalidade", o sistema estará apto a realizar as operações de: Create, Read, Update e Delete, representados pela sigla CRUD, que significam em português as operações básicas  de criação, consulta, atualização e exclusão de dados nas respectivas tabelas de armazenamento destes dados.
 
 ### REQUISITOS FUNCIONAIS
 
@@ -139,7 +141,7 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Paulo Henrique 
 - Empreendedorismo 
 - - Thiago Marques
-- - Fábian
+- - Fabian
 - - Rafael Guimarães
   
 - `RF-5:` Manter salas - CRUD
@@ -164,11 +166,11 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 
 - `RF-7:` Manter usuários - CRUD
 
-- Usuario
-- - nome
-- - username
-- - password
-- - tipo (admin, professor, manutenção, limpeza, aluno)
+- Usuário
+- - Nome
+- - Username
+- - Password
+- - Tipo (admin, professor, manutenção, limpeza, aluno)
 - - Log de ações na aplicação
   
 - `RF-8:` Manter Limpeza - CRUD
@@ -186,22 +188,22 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Status
 - - Sala
 - - Data
-- - Horario
+- - Horário
 - - Objeto a ser arrumado
 - - Usuário que arrumou o objeto 
 
-- `RF- 10:` Emitir notificação - CRUD
+- `RF-10:` Emitir notificação - CRUD
 
 - Notificação 
-- - Usuario
+- - Usuário
 - - Evento
 - - Descrição  
 - - Sala
-- - ?Turno
+- - Turno (penso que é necessário indicar, sim...)
 - - Data
-- - ?Objeto
+- - Objeto (este item é essencial para a equipe saber o que está com problema)
 
-- `RF- 11:` Manter Themas - CRUD
+- `RF-11:` Manter *Themas* - CRUD
 
 - Themas
 - - Textos
@@ -228,13 +230,13 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 
 ## BANCO DE DADOS
 
-Etapa que contém os modelos essências para `schema` do banco de dados;  
+Nesta etapa serão apresentados os modelos essenciais para a elaboração, implantação e utilização dos `schemas` do banco de dados  
 
 ### MODELO LÓGICO
 
 ![](imgs/modelo-relacional.png)
 
-Para visualizar o ERD instale a extesão em seu vscode [dineug](https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode)
+Para visualizar o ERD instale a extensão em seu Visual Studio Code (VSCode) [dineug](https://marketplace.visualstudio.com/items?itemName=dineug.vuerd-vscode)
 
 ### SCRIPT 
 
@@ -292,6 +294,11 @@ CREATE TABLE Reservations
   ResevationId   INT                                  NOT NULL,
   ResevationDate DATETIME                             NOT NULL,
   Period         ENUM("Morning","Vespertine","Nigth") NOT NULL,
+  
+  /*
+  Não localizei aqui na tabela de reservas, a indicação da "quebra de períodos" da M/T/N com o período "antes ou depois de cada intervalo"
+  */
+  
   TeacherId      INT                                  NOT NULL,
   RoomId         int                                  NOT NULL,
   TeamId         INT                                  NOT NULL,
@@ -445,7 +452,7 @@ ALTER TABLE Courses_Disciplines
     REFERENCES Courses (CourseId);
 ```
 
-*Obs*: SQLLite, PostgressSQL e MYSQL 
+*Obs*: SQLite, PostgreSQL e MySQL  (esta observação refere-se aos BD´s que serão possíveis de utilização, ou o SQLite é para *mobile* o PostgreSQL é para *web* e o MySQL para o *backend*? Ou haverá compatibilidade com todos estes BD´s?)
 
 ## PADRÃO DE PROJETOS
 
@@ -457,8 +464,6 @@ ALTER TABLE Courses_Disciplines
 <p align="center">
   <img width="550" src="imgs/screen-prototypes.svg">
 </p>
-
-
 
 
 
