@@ -70,6 +70,7 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - TURMA (Matutino/Vespetino/Noturno)
 - - Nome
 - - Ano 
+- - Semestre
 - 2ª fase
 - - TURMA (Matutino/Vespetino/Noturno)
 - - Nome
@@ -171,7 +172,7 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - tipo (admin, professor, manutenção, limpeza, aluno)
 - - Log de ações na aplicação
   
-- `RF-8:` Manter Limpeza - CRUD
+- `RF-8:` Manter Chamados - CRUD
 
 - Limpeza  
 - - Status
@@ -180,17 +181,7 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Horário
 - - Usuário que limpou a sala
 
-- `RF-9:` Manter manutenção - CRUD
-
-- Manutenção  
-- - Status
-- - Sala
-- - Data
-- - Horario
-- - Objeto a ser arrumado
-- - Usuário que arrumou o objeto 
-
-- `RF- 10:` Emitir notificação - CRUD
+- `RF- 9:` Emitir notificação - CRUD
 
 - Notificação 
 - - Usuario
@@ -201,7 +192,7 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Data
 - - ?Objeto
 
-- `RF- 11:` Manter Themas - CRUD
+- `RF- 10:` Manter Themas - CRUD
 
 - Themas
 - - Textos
@@ -210,7 +201,12 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Marcações 
 - - Plano de fundo
 
-### REQUISITOS NÃO FUNCIONAIS
+- `RF- 11:` Manter API key's - CRUD
+
+- API key
+- - Valor
+
+### REQUISITOS NÃO FUNCIONAIS 
 
 - `RNF-1:` O sistema deve ter uma versão para uso em navegador / web browser
 - `RNF-2:` O sistema deve ter uma versão em *mobile* híbrido (Android / iOS) construídos em *react-native*
@@ -471,3 +467,5 @@ ALTER TABLE Courses_Disciplines
     <td><img src="https://avatars1.githubusercontent.com/u/61851655?s=32&v=4" width="50"></td>
   </tr>
 </table>
+
+
