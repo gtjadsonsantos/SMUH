@@ -141,7 +141,7 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Paulo Henrique 
 - Empreendedorismo 
 - - Thiago Marques
-- - Fabian
+- - Fábian Mendonça - Caco
 - - Rafael Guimarães
   
 - `RF-5:` Manter salas - CRUD
@@ -163,17 +163,23 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Professor
 - - Curso
 - - Disciplina
+Obs.: Ao cadastrar uma reserva, o sistema deve permitir a inclusão de eventos de forma "que se repete" (Não Se Repete / Semanalmente / Quinzenalmente) e caso seja "um evento repetido", o sistema solicitará uma data para finalização. O sistema deve prever as repetições de evento, tanto nas alterações, como nas exclusões de reservas.
 
 - `RF-7:` Manter usuários - CRUD
 
 - Usuário
 - - Nome
-- - Username
+- - Username (email ou CPF)
+- - Email (preferência para o email do @alunos.sc.senac.br ou um email pessoal)
+- - CPF
 - - Password
+- - Celular (verificar a possibilidade de consultar no sistema acadêmico, o número do celular pelo CPF)
 - - Tipo (admin, professor, manutenção, limpeza, aluno)
 - - Log de ações na aplicação
+
+
   
-- `RF-8:` Manter Limpeza - CRUD
+- `RF-8:` Manter limpeza - CRUD
 
 - Limpeza  
 - - Status
@@ -226,11 +232,11 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 
 ### REGRAS DE NEGÓCIO
 
-- `RN-1:` O sistema não deve permitir a reserva da sala, caso a mesma já esteja reservada com o mesmo dia e turno por um professor
+- `RN-1:` O sistema não deve permitir a reserva da sala ou ambiente, caso o mesmo já esteja reservada com o mesmo dia, turno e período por algum professor
 
 ## BANCO DE DADOS
 
-Nesta etapa serão apresentados os modelos essenciais para a elaboração, implantação e utilização dos `schemas` do banco de dados  
+Nesta etapa serão apresentados os modelos essenciais para elaboração, implantação e utilização dos `schemas` do banco de dados  
 
 ### MODELO LÓGICO
 
