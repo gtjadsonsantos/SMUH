@@ -163,7 +163,8 @@ Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc
 - - Professor
 - - Curso
 - - Disciplina
-Obs.: Ao cadastrar uma reserva, o sistema deve permitir a inclusão de eventos de forma "que se repete" (Não Se Repete / Semanalmente / Quinzenalmente) e caso seja "um evento repetido", o sistema solicitará uma data para finalização. O sistema deve prever as repetições de evento, tanto nas alterações, como nas exclusões de reservas.
+
+*Obs*: Ao cadastrar uma reserva, o sistema deve permitir a inclusão de eventos de forma "que se repete" (Não Se Repete / Semanalmente / Quinzenalmente) e caso seja "um evento repetido", o sistema solicitará uma data para finalização. O sistema deve prever as repetições de evento, tanto nas alterações, como nas exclusões de reservas.
 
 - `RF-7:` Manter usuários - CRUD
 
@@ -178,27 +179,7 @@ Obs.: Ao cadastrar uma reserva, o sistema deve permitir a inclusão de eventos d
 - - Log de ações na aplicação
 
 
-  
-- `RF-8:` Manter limpeza - CRUD
-
-- Limpeza  
-- - Status
-- - Nº Sala
-- - Data
-- - Horário
-- - Usuário que limpou a sala
-
-- `RF-9:` Manter manutenção - CRUD
-
-- Manutenção  
-- - Status
-- - Sala
-- - Data
-- - Horário
-- - Objeto a ser arrumado
-- - Usuário que arrumou o objeto 
-
-- `RF-10:` Emitir notificação - CRUD
+- `RF-8:` Emitir notificação - CRUD
 
 - Notificação 
 - - Usuário
@@ -209,7 +190,7 @@ Obs.: Ao cadastrar uma reserva, o sistema deve permitir a inclusão de eventos d
 - - Data
 - - Objeto (este item é essencial para a equipe saber o que está com problema)
 
-- `RF-11:` Manter *Themas* - CRUD
+- `RF-9:` Manter *Themas* - CRUD
 
 - Themas
 - - Textos
@@ -466,11 +447,8 @@ ALTER TABLE Courses_Disciplines
 
 ## PROTOTIPOS
 
-
-<p align="center">
-  <img width="550" src="imgs/screen-prototypes.svg">
-</p>
-
+<iframe style="border: none;" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FzFvY92WDwkqp19NGVvaJr2%2FSMUH%3Fnode-id%3D0%253A1" allowfullscreen>
+</iframe>
 
 
 ## CONTRIBUIDORES 
