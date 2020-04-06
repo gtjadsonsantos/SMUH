@@ -229,6 +229,13 @@ Para visualizar o ERD instale a extensão em seu Visual Studio Code (VSCode) [di
 
 ```sql
 
+CREATE TABLE ApiKeys
+(
+  Value    VARCHAR NOT NULL,
+  ApiKeyId int     NOT NULL,
+  PRIMARY KEY (ApiKeyId)
+);
+
 CREATE TABLE Calls
 (
   CallId      INT                                   NOT NULL,
@@ -244,8 +251,9 @@ CREATE TABLE Calls
 
 CREATE TABLE Courses
 (
-  CourseId   INT          NOT NULL,
-  CourseName VARCHAR(100) NOT NULL,
+  CourseId     INT          NOT NULL,
+  CourseName   VARCHAR(100) NOT NULL,
+  TypeCourseId INT          NOT NULL,
   PRIMARY KEY (CourseId)
 );
 
@@ -281,11 +289,6 @@ CREATE TABLE Reservations
   ResevationId   INT                                  NOT NULL,
   ResevationDate DATETIME                             NOT NULL,
   Period         ENUM("Morning","Vespertine","Nigth") NOT NULL,
-  
-  /*
-  Não localizei aqui na tabela de reservas, a indicação da "quebra de períodos" da M/T/N com o período "antes ou depois de cada intervalo"
-  */
-  
   TeacherId      INT                                  NOT NULL,
   RoomId         int                                  NOT NULL,
   TeamId         INT                                  NOT NULL,
@@ -303,6 +306,18 @@ CREATE TABLE Rooms
   PRIMARY KEY (RoomId)
 );
 
+CREATE TABLE Teacher_courses
+(
+  TeacherId INT NOT NULL,
+  CourseId  INT NOT NULL
+);
+
+CREATE TABLE Teacher_Teams
+(
+  TeacherId INT NOT NULL,
+  CourseId  INT NOT NULL
+);
+
 CREATE TABLE Teachers
 (
   TeacherId INT          NOT NULL,
@@ -312,11 +327,24 @@ CREATE TABLE Teachers
 
 CREATE TABLE Teams
 (
-  TeamId INT                                  NOT NULL,
-  Period ENUM("Morning","Vespertine","Nigth") NOT NULL,
-  Year   INT                                  NOT NULL,
-  Name   VARCHAR(100)                         NOT NULL,
+  TeamId         INT                                  NOT NULL,
+  Period         ENUM("Morning","Vespertine","Nigth") NOT NULL,
+  Year           INT                                  NOT NULL,
+  Name           VARCHAR(100)                         NOT NULL,
+  NumberSemester INT                                  NOT NULL,
   PRIMARY KEY (TeamId)
+);
+
+CREATE TABLE Themes
+(
+  ThemeId           INT         NOT NULL,
+  Text              VARCHAR(60) NOT NULL,
+  LogoImage         VARCHAR(60) NOT NULL,
+  Highlights        VARCHAR(60) NOT NULL,
+  SessionBackground VARCHAR(60) NOT NULL,
+  NameImage         VARCHAR(60) NOT NULL,
+  LoginBackground   VARCHAR(60) NULL    ,
+  PRIMARY KEY (ThemeId)
 );
 
 CREATE TABLE TypeCall
@@ -324,6 +352,13 @@ CREATE TABLE TypeCall
   TypeCall   VARCHAR(20) NOT NULL,
   TypeCallId INT         NOT NULL,
   PRIMARY KEY (TypeCallId)
+);
+
+CREATE TABLE TypeCourses
+(
+  TypeCourseId INT          NOT NULL,
+  TypeName     VARCHAR(100) NOT NULL,
+  PRIMARY KEY (TypeCourseId)
 );
 
 CREATE TABLE TypesRooms
@@ -342,8 +377,8 @@ CREATE TABLE TypesStatus
 
 CREATE TABLE TypeUsers
 (
-  TypeUseId INT         NOT NULL,
-  TypeName  VARCHAR(20) NOT NULL,
+  TypeName  ENUM("administrator","teacher","student","comum") NOT NULL,
+  TypeUseId INT                                               NOT NULL,
   PRIMARY KEY (TypeUseId)
 );
 
@@ -354,6 +389,9 @@ CREATE TABLE Users
   Username  VARCHAR(50)  NOT NULL,
   Password  VARCHAR(50)  NOT NULL,
   TypeUseId INT          NOT NULL,
+  Email     VARCHAR(100) NULL    ,
+  Cpf       VARCHAR(100) NULL    ,
+  Telefone  VARCHAR(11)  NULL    ,
   PRIMARY KEY (UserId)
 );
 
@@ -437,6 +475,31 @@ ALTER TABLE Courses_Disciplines
   ADD CONSTRAINT FK_Courses_TO_Courses_Disciplines
     FOREIGN KEY (CourseId)
     REFERENCES Courses (CourseId);
+
+ALTER TABLE Courses
+  ADD CONSTRAINT FK_TypeCourses_TO_Courses
+    FOREIGN KEY (TypeCourseId)
+    REFERENCES TypeCourses (TypeCourseId);
+
+ALTER TABLE Teacher_courses
+  ADD CONSTRAINT FK_Teachers_TO_Teacher_courses
+    FOREIGN KEY (TeacherId)
+    REFERENCES Teachers (TeacherId);
+
+ALTER TABLE Teacher_courses
+  ADD CONSTRAINT FK_Courses_TO_Teacher_courses
+    FOREIGN KEY (CourseId)
+    REFERENCES Courses (CourseId);
+
+ALTER TABLE Teacher_Teams
+  ADD CONSTRAINT FK_Teachers_TO_Teacher_Teams
+    FOREIGN KEY (TeacherId)
+    REFERENCES Teachers (TeacherId);
+
+ALTER TABLE Teacher_Teams
+  ADD CONSTRAINT FK_Courses_TO_Teacher_Teams
+    FOREIGN KEY (CourseId)
+    REFERENCES Courses (CourseId);
 ```
 
 *Obs*: SQLite, PostgreSQL e MySQL  (esta observação refere-se aos BD´s que serão possíveis de utilização, ou o SQLite é para *mobile* o PostgreSQL é para *web* e o MySQL para o *backend*? Ou haverá compatibilidade com todos estes BD´s?)
@@ -453,10 +516,16 @@ ALTER TABLE Courses_Disciplines
 
 ## CONTRIBUIDORES 
 
-<table>
-  <tr>
-    <td><img src="https://avatars3.githubusercontent.com/u/42282908?s=60&v=4" width="50"></td>
-    <td><img src="https://avatars2.githubusercontent.com/u/54027728?s=60&v=4" width="50"></td>
-    <td><img src="https://avatars1.githubusercontent.com/u/61851655?s=32&v=4" width="50"></td>
-  </tr>
-</table>
+|<img src="https://avatars2.githubusercontent.com/u/54027728?s=60&v=4" width="60">|<img src="https://avatars3.githubusercontent.com/u/57224822?s=60&v=4" width="60">|
+|:-:|:-:|
+|@lucianokogut|@amazingbits|
+
+
+
+## AUTOR 
+
+|<img src="https://avatars3.githubusercontent.com/u/42282908?s=60&v=4" width="60">|
+|:-:|
+|@jadson179|
+
+

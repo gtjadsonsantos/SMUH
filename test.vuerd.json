@@ -2,8 +2,8 @@
   "canvas": {
     "width": 3000,
     "height": 3000,
-    "scrollTop": 0,
-    "scrollLeft": 997,
+    "scrollTop": 76.80000305175781,
+    "scrollLeft": 0,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -16,7 +16,7 @@
       "relationship": true
     },
     "database": "MySQL",
-    "databaseName": "",
+    "databaseName": "SMUH",
     "canvasType": "ERD",
     "language": "graphql",
     "tableCase": "pascalCase",
@@ -1267,7 +1267,7 @@
           "left": 755.6000204563151,
           "widthName": 60,
           "widthComment": 60,
-          "zIndex": 1622
+          "zIndex": 1825
         }
       },
       {
@@ -1733,7 +1733,7 @@
             }
           },
           {
-            "name": "Background",
+            "name": "SessionBackground",
             "comment": "",
             "dataType": "VARCHAR(60)",
             "default": "",
@@ -1749,14 +1749,14 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 71,
+              "widthName": 117,
               "widthComment": 60,
               "widthDataType": 87,
               "widthDefault": 60
             }
           },
           {
-            "name": "Name",
+            "name": "NameImage",
             "comment": "",
             "dataType": "VARCHAR(60)",
             "default": "",
@@ -1765,16 +1765,39 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 73,
               "widthComment": 60,
               "widthDataType": 88,
+              "widthDefault": 60
+            }
+          },
+          {
+            "name": "LoginBackground",
+            "comment": "",
+            "dataType": "VARCHAR(60)",
+            "default": "",
+            "id": "6320ebf7-abaf-4cee-a266-5928ab8e4ede",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 103,
+              "widthComment": 60,
+              "widthDataType": 87,
               "widthDefault": 60
             }
           }
@@ -1786,7 +1809,7 @@
           "left": 1256.2000304985052,
           "widthName": 60,
           "widthComment": 60,
-          "zIndex": 1801
+          "zIndex": 1824
         }
       },
       {
