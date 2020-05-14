@@ -10,8 +10,6 @@
   <img src="imgs/muil-plataforma.svg">
 </p>
 
-Eu sugiro que o *Thema* principal seja ajustado com a padrozinação de cores que o Senac já costuma utilizar (conforme portal.sc.senac.br), sendo que outro temas possam ser escolhidos pelos usuários...
-
 Aplicação para gerenciamento de salas 
 
 ## CONTEXTUALIZAÇÃO 
@@ -43,161 +41,14 @@ Considerando esta demanda específica da Faculdade SENAC Florianópolis, relacio
 ### REQUISITOS FUNCIONAIS
 
 - `RF-1:` Manter cursos - CRUD 
-
-*exemplo*: 
-- Jovem Aprendiz e Formação Inicial e Continuada 
-- Livres 
-- Técnicos 
-- - Design de Interiores
-- - Administração
-- - Farmácia
-- - Marketing 
-- - ETC 
-- Graduação
-- - Gestão Comercial 
-- - TGTI
-- - Processos Gerenciais 
-- - ADS
-- - ETC 
-- Pós-Graduação 
-- - Títulos presenciais
-- - Títulos a distância
-- - MBA´s com algumas opções
-
-Obs: Cada curso pode ter esses tipos NEB, NES, FIC, Jovem Aprendiz, etc 
-
 - `RF-2:` Manter turmas - CRUD
-
-- 1ª fase
-- - TURMA (Matutino/Vespetino/Noturno)
-- - Nome
-- - Ano 
-- 2ª fase
-- - TURMA (Matutino/Vespetino/Noturno)
-- - Nome
-- - Ano 
-- 3ª fase
-- - TURMA (Matutino/Vespetino/Noturno)
-- - Nome
-- - Ano 
-- 4ª fase
-- - TURMA (Matutino/Vespetino/Noturno)
-- - Nome
-- - Ano 
-- 5ª fase
-- - TURMA (Matutino/Vespetino/Noturno)
-- - Nome
-- - Ano 
-
-*exemplo*:
-
-- 1ª fase ADS  
-- 3ª fase PG Noturno 
-- 5ª fase TGTI Noturno 
-- 4 fase GC Noturno 
-- Pós Lato Sensu Gerenciamento de Projetos 2020 
-- Pós LS Semanal Segurança da Informação 2020 
-- MBA Inovação 2019 
-- Jovem Aprendiz em Serviços Administrativos 
-- Aprendizagem Comercial em Vendas 
-- Aprendizagem Comercial em Supermercados 
-- ETC
-
 - `RF-3:` Manter disciplinas - CRUD
-
-- ADS 
-- - Modelagem de Dados 
-- - Engenharia de Requisitos ..ETC
-- TGTI
-- - Governança de TI 
-- - Planejamento Estratégico ..ETC
-- MBA 
-- - Inovação 
-- - Empreendedorismo 
-- - Gestão de Negócios 
-- - Equipes Ágeis ..ETC
-  
 - `RF-4:` Manter professores - CRUD
-
-*exemplo*:
-
-- Modelagem de Dados
-- - André Ulisses
-- - Bruno Rafael
-- - Paulo Henrique
-- Engenharia de Requisitos 
-- - Paulo Lapolli
-- - Flávio
-- - Francisco Teston
-- - Thayse 
-- Governança de TI
-- - Flávio
-- - Adriano Melo 
-- - Thayse
-- - Cecília 
-- Planejamento Estratégico 
-- - Ronaldo Pasquini
-- - Thiago Marques
-- - Paulo Henrique 
-- Empreendedorismo 
-- - Thiago Marques
-- - Fábian Mendonça - Caco
-- - Rafael Guimarães
-  
 - `RF-5:` Manter salas - CRUD
-
-- Sala
-- - Número
-- - Tipo (Laboratório de Informática,Laboratório de Costura,Sala de Aula,Pedagogia)
-- - Detalhes 
-- - Espaço disponível
-
-*Obs*: Conforme planilha de ensalamento 
-  
 - `RF-6:` Manter reservas - CRUD
-
-- Rerserva
-- - Sala 
-- - Horario
-- - Turno
-- - Professor
-- - Curso
-- - Disciplina
-
-*Obs*: Ao cadastrar uma reserva, o sistema deve permitir a inclusão de eventos de forma "que se repete" (Não Se Repete / Semanalmente / Quinzenalmente) e caso seja "um evento repetido", o sistema solicitará uma data para finalização. O sistema deve prever as repetições de evento, tanto nas alterações, como nas exclusões de reservas.
-
 - `RF-7:` Manter usuários - CRUD
-
-- Usuário
-- - Nome
-- - Username (email ou CPF)
-- - Email (preferência para o email do @alunos.sc.senac.br ou um email pessoal)
-- - CPF
-- - Password
-- - Celular (verificar a possibilidade de consultar no sistema acadêmico, o número do celular pelo CPF)
-- - Tipo (admin, professor, manutenção, limpeza, aluno)
-- - Log de ações na aplicação
-
-
 - `RF-8:` Emitir notificação - CRUD
-
-- Notificação 
-- - Usuário
-- - Evento
-- - Descrição  
-- - Sala
-- - Turno (penso que é necessário indicar, sim...)
-- - Data
-- - Objeto (este item é essencial para a equipe saber o que está com problema)
-
-- `RF-9:` Manter *Themas* - CRUD
-
-- Themas
-- - Textos
-- - Botões
-- - Imagens
-- - Marcações 
-- - Plano de fundo
+- `RF-9:` Manter Temas - CRUD
 
 ### REQUISITOS NÃO FUNCIONAIS
 
@@ -228,6 +79,7 @@ Para visualizar o ERD instale a extensão em seu Visual Studio Code (VSCode) [di
 ### SCRIPT 
 
 ```sql
+
 
 CREATE TABLE ApiKeys
 (
@@ -343,7 +195,7 @@ CREATE TABLE Themes
   Highlights        VARCHAR(60) NOT NULL,
   SessionBackground VARCHAR(60) NOT NULL,
   NameImage         VARCHAR(60) NOT NULL,
-  LoginBackground   VARCHAR(60) NULL    ,
+  LoginBackground   VARCHAR(60) NOT NULL,
   PRIMARY KEY (ThemeId)
 );
 
@@ -391,7 +243,7 @@ CREATE TABLE Users
   TypeUseId INT          NOT NULL,
   Email     VARCHAR(100) NULL    ,
   Cpf       VARCHAR(100) NULL    ,
-  Telefone  VARCHAR(11)  NULL    ,
+  Phone     VARCHAR(11)  NULL    ,
   PRIMARY KEY (UserId)
 );
 
@@ -527,5 +379,4 @@ ALTER TABLE Teacher_Teams
 |<img src="https://avatars3.githubusercontent.com/u/42282908?s=60&v=4" width="60">|
 |:-:|
 |@jadson179|
-
 
